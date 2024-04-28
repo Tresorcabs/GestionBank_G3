@@ -57,6 +57,7 @@ input:nth-child(5){
 	border: none;
 	outline: none;
 	border-radius: 5px;
+	color: #0f0c29;
 }
 button{
 	width: 60%;
@@ -89,11 +90,30 @@ button:hover{
 	color: #573b8a;
 	transform: scale(.6);
 }
-
-
+.terms{
+	margin-top: -10px;
+}
+.customFileBtn{
+	font-size: .8rem;
+	color: #0f0c29;
+	width: 60%;
+	height: 20px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+#select-image{
+	display: none;
+}
 
 .signup .validation{
 	display: flex;
+	margin-top: -30px;
 }
 .signup .validation input[type="checkbox"]{
 	margin-left: 90px;
@@ -132,10 +152,12 @@ button:hover{
 					<input type="password" name="pswd" placeholder="email" required="">
 					<input type="password" name="pswd" placeholder="mot de passe" required="">
 					<input type="Authentif" name="tel" placeholder="numero de telephone" required="">
+					<input type="file" name="" id="select-image">
+					<label for="select-image" class="customFileBtn">Choisir une photo de profil</label>
 					<button>S'enregistrer</button>
 					<div class="validation">
 						<input type="checkbox" name="terme" id="condi_uti" required="">
-						<label for="condi_uti">j'ai lu et j'accepte les  <a href="#"> termes du contrat</a> </label>
+						<label for="condi_uti" class="terms">j'ai lu et j'accepte les  <a href="#"> termes du contrat</a> </label>
 					</div>
 				</form>
 			</div>    

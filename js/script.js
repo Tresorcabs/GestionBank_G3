@@ -1,17 +1,3 @@
-window.alert = function(message, timeout=null){
-    const CustomAlert = document.createElement('div');
-    CustomAlert.classList.add('alert');
-    CustomAlert.setAttribute('style',`
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 10px 5px 0 #00000044
-    `);
-    CustomAlert.innerHTML = message;
-    document.appendChild(alert);
-};
 
 const body = document.querySelector("body"),
       modeToggle = body.querySelector(".mode-toggle");
@@ -52,4 +38,23 @@ function SignoutConfirm(){
     if ( choix == false ){
         event.preventDefault();
     }
+}
+
+let Popup1 = document.getElementById("op1");
+let Popup2 = document.getElementById("op2");
+let PopupGenerale = document.getElementsByClassName("operatioPopup");
+
+function startWithdrawPopup(){
+    Popup2.classList.toggle("open");
+}
+function closePopup2(){
+    Popup2.classList.remove("open");
+}
+
+
+function startTransfertPopup(){
+    Popup1.classList.toggle("open");
+}
+function closePopup1(){
+    Popup1.classList.remove("open");
 }

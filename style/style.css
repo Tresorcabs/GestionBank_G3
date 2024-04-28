@@ -147,7 +147,7 @@ body.dark li a:hover:before{
 }
 .menu-items li a .link-name{
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--black-light-color);    
     transition: var(--tran-05);
 }
@@ -485,6 +485,70 @@ body.dark textarea{
 }
 body.dark textarea::placeholder{
     color: var(--panel-color);
+}
+
+/*Popup de retrait et de tranfert*/
+.operatioPopup{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    gap: 20px;
+    position: absolute;
+    transition: var(--tran-05);
+}
+#op1.open{
+    display: flex !important;
+}
+#op2.open{
+    display: flex !important;
+}
+.popup{
+    display: flex;
+    padding: 50px 10px;
+    background-color: #a6b485;
+    border-radius: 15px;
+    z-index: 1000;
+}
+.popup form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px 0 20px;
+}
+.popup form span{
+    font-size: 1.5rem;
+}
+.popup .inputs{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.popup form input{
+    padding: .8rem 1.5rem;
+    margin: 5px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+}
+.popup form input{
+    transition: var(--tran-03);
+    font-weight: 600;
+}
+.popup form input[type="submit"]{
+    background-color: var(--hello-color);
+    cursor: pointer;
+}
+.popup form input[type="submit"]:hover,
+.popup form input[type="reset"]:hover{
+    background-color: var(--black-light-color);
+    cursor: pointer;
 }
 @media (max-width: 1000px) {
     nav{

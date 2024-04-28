@@ -29,9 +29,9 @@
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li  style="color:rgba(253, 222, 165, 0.616);;"><a href="Tableau.html">
-                 <i  style="color:rgba(253, 222, 165, 0.616);;">   <ion-icon name="analytics-outline"></ion-icon></i>
-                    <span class="link-name">Tableau</span>
+                <li  style="color:#a6b485;"><a href="Tableau.html">
+                 <i  style="color:#a6b485;">   <ion-icon name="analytics-outline"></ion-icon></i>
+                    <span  style="color:#a6b485;" class="link-name">Tableau</span>
                 </a></li>
                 <li><a href="Service_client.html">
                    <i> <ion-icon name="headset-outline"></ion-icon></i>
@@ -59,12 +59,57 @@
         </div>
     </nav>
 
+
+    <!-- LES POPUP (FORMULAIRES) DES OPERATIONS -->
+
+<div class="operatioPopup " id="op1">
+
+       <div class="popup transfertPopup">
+                    <form action="" method="post">
+                        <span>Transfert d'argent</span>
+
+                        <div class="inputs">
+                        <input type="text" name="" id="" placeholder="numéro du bénéficiaire *" required>
+                        <input type="number" name="" id="" placeholder="montant (XAF) *" required>
+                        <input type="password" name="" id="" placeholder="votre mot de passe *">
+                   <div class="btn">
+                        <input type="submit" value="Tranfert">
+                    <input type="reset" value="Annuler" onclick="closePopup1()">
+                </div>
+                    </div>
+
+                    </form>
+                </div>
+               
+            </div>
+
+            <div class="operatioPopup " id="op2">
+                <div class="popup retraitPopup">
+                    <form action="" method="post">
+                        <span>Retirer de l'argent</span>
+
+                        <div class="inputs">
+                        <input type="number" name="" id="" placeholder="montant (XAF) *" required>
+                        <input type="password" name="" id="" placeholder="mot de passe *" required>
+                        <div class="btn">
+                    <input type="submit" value="Retirer">
+                    <input type="reset" value="Annuler" onclick="closePopup2()">
+                        </div>
+                </div>
+                    
+                    </form>
+                </div>
+
+            </div>
+
+
+            <!-- LE DASHBOARD -->
     <section class="dashboard">
         <div class="top">
-            <i class="uil uil-bars sidebar-toggle"></i>
+            <i class="sidebar-toggle"><ion-icon name="menu-outline"></ion-icon></i>
 
             <div class="search-box">
-                <i class="uil uil-search"></i>
+                <i><ion-icon name="search-outline"></ion-icon></i>
                 <input type="text" placeholder="Afficher un type de transaction...">
             </div>
             
@@ -76,8 +121,9 @@
                 <div class="title hello">
                     <span>Bon retour, </span> <span>John Doe</span>
                 </div>
+
                 <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <i><ion-icon name="speedometer-outline"></ion-icon></i>
                     <span class="text">Tableau de Bord</span>
                 </div>
 
@@ -94,25 +140,26 @@
                        
                         <div class="box21">
                          
-                            <button class="operation">Retirer de l'argent</button>
+                            <button class="operation" onclick="startWithdrawPopup()">Retirer de l'argent</button>
                         </div>
 
                         <div class="box22">
                           
-                            <button class="operation">Transférer de l'argent</button>
+                            <button class="operation" onclick="startTransfertPopup()">Transférer de l'argent</button>
                         </div>
                     </div>
+
                    
                     <div class="box box3">
-                        <span class="text">Carte de Crédit</span>
-                        <span class="number">10,120</span>
+                        <span class="text">Infos de compte (numéro)</span>
+                        <span class="number">000XXXXXX00</span>
                     </div>
                 </div>
             </div>
 
             <div class="activity">
                 <div class="title">
-                    <i class="uil uil-clock-three"></i>
+                    <i><ion-icon name="time-outline"></ion-icon></i>
                     <span class="text">Historique des transactions</span>
                 </div>
 
@@ -170,6 +217,7 @@
                 </div>
             </div>
         </div>
+        
     </section>
 
     <script src="js/script.js"></script>
