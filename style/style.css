@@ -415,11 +415,10 @@ nav.close ~ .dashboard .top{
 /*PARTIE 2 : SERVICE CLIENT*/
 /*PARTIE DASHBOARD DE SERVICE CLIENT*/
 .service{
-    position: relative;
     left: 250px;
     background-color: var(--panel-color);
     min-height: 100vh;
-    width: calc(100% - 250px);
+    width: 100%;
     padding: 10px 14px;
     transition: var(--tran-05);
 }
@@ -449,7 +448,12 @@ nav.close ~ .service .top{
     color: var(--text-color);
     cursor: pointer;
 }
-
+.service .hello{
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 20px;
+    width: 80%;
+}
 .MsgBox{
  display: flex;
  flex-direction: column;
@@ -464,7 +468,10 @@ textarea{
     font-weight: 500;
     outline: none;
 }
-
+.service .MsgBox textarea{
+    width: 50rem;
+    height: 20rem;
+}
 .MsgBox button{
     width: 25%;
     border: none;
@@ -599,6 +606,10 @@ body.dark textarea::placeholder{
     .boxes .box2 i{
         display: none;
     }
+    .service .MsgBox textarea{
+        width: 30rem;
+        height: 30rem;
+    }
 }
 @media (max-width: 800px) {
     .boxes .box .number{
@@ -610,11 +621,19 @@ body.dark textarea::placeholder{
     .dash-content .boxes .box{
         width: calc(100% / 2 - 15px);
         margin-top: 15px;
+        .service .MsgBox textarea{
+            width: 20rem;
+            height: 30rem;
+        }
     }
 }
 @media (max-width: 560px) {
     .dash-content .boxes .box{
         width: 100% ;
+    }
+    .service .MsgBox textarea{
+        width: 18rem;
+        height: 25rem;
     }
 }
 @media (max-width: 400px) {
@@ -655,5 +674,9 @@ body.dark textarea::placeholder{
     nav.close ~ .dashboard .top{
         left: 0;
         width: 100%;
+    }
+    .service .MsgBox textarea{
+        width: 15rem;
+        height: 20rem;
     }
 }
