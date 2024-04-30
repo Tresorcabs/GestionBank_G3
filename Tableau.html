@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 
-    <title>Admin Dashboard Panel</title> 
+    <title>Bank G3 - Dashboard </title> 
 </head>
 <body>
     <nav>
@@ -102,6 +102,48 @@
 
             </div>
 
+            <div class="operatioPopup " id="op3">
+                <div class="popup depotPopup">
+                    <form action="" method="post">
+                        <span>Déposer de l'argent</span>
+
+                        <div class="depotOptions">
+                       <button type="button" onclick="momoOmPopup()"><img src="Images/mtn_momo.png" alt="" ><span>Via MTN Mobile Money</span></button>
+                       <button type="button" onclick="momoOmPopup()"><img src="Images/Orange-Money-emblem-500x228.png" alt=""><span>Via Orange Money</span></button>
+                       <div class="btn">
+                    <input type="reset" value="Annuler" onclick="closePopup3()">
+                        </div>
+                </div>
+                    
+                    </form>
+                </div>
+
+            </div>
+
+
+
+            <div class="operatioPopup " id="op4">
+
+                <div class="popup momoOmPopup">
+                             <form action="" method="post">
+                                 <span>Dépôt d'argent</span>
+         
+                                 <div class="inputs">
+                                 <input type="text" name="" id="" placeholder="numéro du téléphone *" required>
+                                 <input type="number" name="" id="" placeholder="montant (XAF) *" required>
+                                 <input type="password" name="" id="" placeholder="votre mot de passe *">
+                            <div class="btn">
+                                 <input type="submit" value="Tranfert">
+                             <input type="reset" value="Annuler" onclick="closePopup4()">
+                         </div>
+                             </div>
+         
+                             </form>
+                         </div>
+                        
+                     </div>
+            
+
 
             <!-- LE DASHBOARD -->
     <section class="dashboard">
@@ -136,16 +178,21 @@
                     
                     </div>
                     <div class="box box2">
-                        <i><ion-icon name="swap-horizontal-outline"></ion-icon> <span>Opérations</span></i>
+                        <!-- <i><ion-icon name="swap-horizontal-outline"></ion-icon> <span>Opérations</span></i> -->
                        
                         <div class="box21">
                          
-                            <button class="operation" onclick="startWithdrawPopup()">Retirer de l'argent</button>
+                            <button class="operation" onclick="startWithdrawPopup()">Retrait</button>
                         </div>
 
                         <div class="box22">
                           
-                            <button class="operation" onclick="startTransfertPopup()">Transférer de l'argent</button>
+                            <button class="operation" onclick="startTransfertPopup()">Virement</button>
+                        </div>
+
+                        <div class="box22">
+                          
+                            <button class="operation" onclick="startDepotPopup()">Dépôt</button>
                         </div>
                     </div>
 

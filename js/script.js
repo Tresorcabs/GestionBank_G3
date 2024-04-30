@@ -42,6 +42,8 @@ function SignoutConfirm(){
 
 let Popup1 = document.getElementById("op1");
 let Popup2 = document.getElementById("op2");
+let Popup3 = document.getElementById("op3");
+let Popup4 = document.getElementById("op4");
 let PopupGenerale = document.getElementsByClassName("operatioPopup");
 
 function startWithdrawPopup(){
@@ -57,4 +59,20 @@ function startTransfertPopup(){
 }
 function closePopup1(){
     Popup1.classList.remove("open");
+}
+
+
+function startDepotPopup(){
+    Popup3.classList.toggle("open");
+}
+function closePopup3(){
+    Popup3.classList.remove("open");
+}
+
+
+function momoOmPopup(){
+    Popup4.classList.toggle("open");
+}
+function closePopup4(){
+    Popup4.classList.remove("open");
 }
